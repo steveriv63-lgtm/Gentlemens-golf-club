@@ -9,11 +9,20 @@ exports.handler = async () => {
 
   try {
     if (!process.env.DATABASE_URL) {
-      throw new Error("DATABASE_URL non configurata");
+      throw new Error("Connessione al database non configurata");
     }
 
     await client.connect();
-    await client.query("SELECT 1");
+
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS comunicazioni (
+        id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+        titolo TEXT NOT NULL,
+        messaggio TEXT NOT NULL,
+        data_pubblicazione TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+        pubblicata BOOLEAN NOT NULL DEFAULT TRUE
+      )
+    `);
 
     return {
       statusCode: 200,
@@ -23,11 +32,11 @@ exports.handler = async () => {
       },
       body: JSON.stringify({
         stato: "ok",
-        messaggio: "Connessione al database riuscita"
+        messaggio: "Tabella comunicazioni pronta"
       })
     };
   } catch (error) {
-    console.error("Errore connessione database:", error.message);
+    console.error("Errore inizializzazione:", error.message);
 
     return {
       statusCode: 500,
@@ -37,7 +46,7 @@ exports.handler = async () => {
       },
       body: JSON.stringify({
         stato: "errore",
-        messaggio: "Connessione al database non riuscita"
+        messaggio: "Impossibile preparare la tabella"
       })
     };
   } finally {
