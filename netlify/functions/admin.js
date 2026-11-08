@@ -88,11 +88,7 @@ function verifyPassword(password, stored) {
 exports.handler = async event => {
   const secret = process.env.AREA_SOCI_SESSION_SECRET;
   const hash = process.env.ADMIN_PASSWORD_HASH;
-console.log("CONTROLLO ADMIN:", {
-  variabilePresente: Boolean(hash),
-  formatoCorretto: /^pbkdf2-sha256:\d+:[A-Za-z0-9+/=]+:[A-Za-z0-9+/=]+$/.test(hash || ""),
-  spaziEsterni: hash !== (hash || "").trim()
-});
+
   if (!secret || !hash) {
     return response(503, "<h1>Amministrazione in preparazione</h1><p>Configurazione da completare.</p>");
   }
