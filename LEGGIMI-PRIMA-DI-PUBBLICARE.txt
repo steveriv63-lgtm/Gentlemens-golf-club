@@ -1,0 +1,1 @@
+VEDI ISTRUZIONI-AREA-SOCI.txt. Area Soci protetta da Function solo dopo deploy con build. Non caricare documenti riservati in file pubblici.

@@ -1,0 +1,21 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/area-soci.html"
+  to = "/.netlify/functions/soci"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/area-soci"
+  to = "/.netlify/functions/soci"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/documenti-riservati/*"
+  to = "/.netlify/functions/soci"
+  status = 200
+  force = true

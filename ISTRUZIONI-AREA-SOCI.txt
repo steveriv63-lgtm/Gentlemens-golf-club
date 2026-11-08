@@ -1,0 +1,27 @@
+GENTLEMEN'S GOLF CLUB — AREA SOCI PROTETTA
+
+IMPORTANTE: NON pubblicare questo ZIP con il solo caricamento manuale drag-and-drop.
+Le Netlify Functions devono essere compilate e distribuite tramite un deploy con build
+(es. repository Git collegato a Netlify, oppure Netlify CLI con build).
+Il semplice caricamento manuale di file statici non attiva la protezione.
+
+1) Collega questa cartella a un repository Git e fai il deploy tramite Netlify.
+   La configurazione netlify.toml include la Function e il rewrite obbligatorio.
+2) Sul TUO PC Windows, esegui CREA-CREDENZIALI-WINDOWS.ps1 con PowerShell.
+   Non condividere password né i valori generati in chat.
+3) Netlify > Project configuration > Environment variables:
+   AREA_SOCI_PASSWORD_HASH = valore pbkdf2-sha256:... generato
+   AREA_SOCI_SESSION_SECRET = valore casuale generato
+   Imposta scope Functions (o All scopes) e fai un nuovo deploy.
+4) Apri /area-soci.html in una finestra anonima: deve chiedere la password.
+   Verifica accesso, logout, 30 giorni di sessione e che la pagina non sia
+   accessibile senza cookie. Controlla anche /.netlify/functions/soci.
+5) I documenti privati NON sono ancora inclusi e NON devono essere caricati
+   in assets/ o altre cartelle statiche. Per renderli disponibili serve
+   una successiva funzione che li recuperi da storage privato, con verifica
+   della sessione a ogni richiesta.
+
+NOTA SICUREZZA: password condivisa = nessuna revoca individuale. Per togliere
+l'accesso a un socio, cambiare la password e ruotare SESSION_SECRET.
+Il login non dispone ancora di rate limiting distribuito: attivare misure
+anti-abuso prima di condividere pubblicamente l'accesso.

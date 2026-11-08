@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Contatti | Gentlemen’s Golf Club</title><style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:#0a315e;font-family:Georgia,serif}a{color:inherit;text-decoration:none}header{position:sticky;top:0;z-index:20;background:linear-gradient(105deg,#eaf3ff,#fff);display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 5vw;box-shadow:0 1px 8px #00285522}header img{width:min(390px,37vw);height:auto}nav{display:flex;flex-wrap:wrap;gap:clamp(10px,2vw,30px);align-items:center;font-size:16px}nav a:hover,nav a:focus{text-decoration:underline}.hero{height:clamp(290px,25vw,450px);background:url('assets/clubhouse-motto-definitivo.jpg') center/cover no-repeat}.quick{background:linear-gradient(120deg,#05274d,#0c4078);display:flex;justify-content:space-around;flex-wrap:wrap;color:white;padding:21px 15px;gap:12px}.quick a{font-size:17px;padding:5px}.quick a:hover{text-decoration:underline}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;padding:22px 2vw 38px}.photo-card{min-width:0;display:flex;flex-direction:column;background:#072f5b}.photo-card img{width:100%;height:205px;object-fit:cover}.photo-card span{color:white;text-align:center;padding:12px 4px;font-size:22px;font-style:italic}.section{max-width:1200px;margin:auto;padding:75px 25px;scroll-margin-top:110px}.section h2,.chapter h2{font-size:clamp(31px,4vw,48px);font-weight:normal;font-style:italic;margin:0 0 22px}.section p{font:17px/1.8 Arial,sans-serif;color:#52687e}.tint{background:#f0f5fa}.wide{max-width:none}.inner{max-width:1200px;margin:auto}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:30px}table{width:100%;border-collapse:collapse;font:15px/1.5 Arial,sans-serif;background:white}td,th{padding:12px 15px;border-bottom:1px solid #dce5ee;text-align:left}th{background:#073566;color:white}.note{font-size:14px!important}.gallery-intro{max-width:1250px;margin:auto;padding:70px 25px 5px}.gallery-intro h2{font:italic 48px Georgia;margin:0}.chapters{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0}.chapters a{border:1px solid #9bb6d0;border-radius:30px;padding:10px 15px;font:14px Arial;background:white}.chapter{max-width:1300px;margin:20px auto 55px;padding:0 25px;scroll-margin-top:110px}.chapter h2 span{color:#7191b8;font:normal 14px Arial;margin-right:15px}.chapter p{font:16px/1.6 Arial;color:#52687e}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:15px;margin-top:20px}.gallery a{background:white;box-shadow:0 4px 15px #0a315e16;overflow:hidden}.gallery img{width:100%;height:225px;object-fit:cover;display:block}.gallery span{display:block;padding:10px;font:13px Arial}footer{background:#062f5c;color:white;text-align:center;padding:40px;font:italic 28px Georgia}@media(max-width:900px){header{position:static;display:block;text-align:center}header img{width:min(440px,85vw)}nav{justify-content:center;margin-top:10px}.cards{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}@media(max-width:520px){.cards{grid-template-columns:1fr 1fr;gap:7px}.photo-card img{height:140px}.photo-card span{font-size:15px}.hero{height:220px}nav{font-size:13px}.quick a{font-size:13px}}
+
+/* Nuove fotografie e coppa: inserimento non invasivo */
+.trophy-feature{max-width:1190px;margin:6px auto 24px;padding:14px 22px;display:flex;align-items:center;gap:23px;border-top:1px solid #dce6f0;border-bottom:1px solid #dce6f0;background:#fbfcfe}
+.trophy-feature img{width:88px;height:112px;object-fit:cover;object-position:center 42%;border-radius:3px;box-shadow:0 3px 14px #082f5b22}
+.trophy-feature .eyebrow{font:12px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#6380a1}
+.trophy-feature h2{font:italic 26px Georgia,serif;margin:6px 0;color:#082f5b}
+.trophy-feature p{font:14px/1.5 Arial,sans-serif;color:#52687e;margin:0 0 8px}
+.trophy-feature a{font:600 13px Arial,sans-serif;color:#0b4d87;text-decoration:underline}
+@media(max-width:560px){.trophy-feature{margin:0 12px 15px;padding:12px;gap:14px}.trophy-feature img{width:70px;height:95px}.trophy-feature h2{font-size:21px}}
+
+/* Correzioni responsive: desktop, tablet e smartphone */
+html,body{width:100%;max-width:100%;overflow-x:clip}
+img,video,iframe{max-width:100%}
+header{min-width:0}
+header img{max-width:100%;height:auto}
+nav{min-width:0;max-width:100%;justify-content:center}
+nav a{overflow-wrap:anywhere}
+.hero{background-color:#082e57;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1672 / 341;min-height:0}
+@media(max-width:1050px){
+ header{position:relative;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:14px 16px;gap:10px}
+ header img{width:min(430px,90vw)}
+ nav{display:flex;justify-content:center;gap:8px 14px;font-size:14px;line-height:1.35}
+ .section,.chapter,.gallery-intro{padding-left:18px;padding-right:18px}
+ .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .grid2{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:600px){
+ header{padding:12px 12px}
+ header img{width:min(370px,92vw)}
+ nav{gap:7px 12px;font-size:13px}
+ nav a{padding:5px 2px}
+ .hero{height:auto;min-height:0;aspect-ratio:1672 / 341;background-size:contain}
+ .quick{padding:12px 10px;gap:5px 10px}
+ .quick a{font-size:13px;padding:7px 5px}
+ .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:14px 10px 22px}
+ .photo-card img{height:clamp(105px,32vw,170px)}
+ .photo-card span{font-size:clamp(13px,3.5vw,17px);padding:9px 5px}
+ .section{padding:40px 16px}
+ .gallery-intro{padding:42px 16px 5px}
+ .gallery-intro h2{font-size:clamp(29px,8vw,42px)}
+ .chapter{padding:0 16px}
+ .gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .gallery img{height:clamp(120px,35vw,185px)}
+ .chapters{gap:7px}
+ .chapters a{font-size:12px;padding:9px 11px}
+ .trophy-feature{margin:0 10px 16px}
+ table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+ .banner{padding:36px 18px}
+ .banner h1{font-size:clamp(30px,9vw,46px)}
+ .content{padding:0 16px;margin:28px auto 48px}
+ .grid,.cards{min-width:0}
+}
+
+
+/* Firma del Club: corsivo calligrafico */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+.club-signature{font-family:"Caveat","Segoe Print","Brush Script MT",cursive;font-weight:600;letter-spacing:-.035em;text-transform:none;font-size:clamp(27px,4.5vw,52px);line-height:1.1;display:inline-block;white-space:nowrap;max-width:100%;}
+footer .club-signature{color:#f6f9ff;margin-left:.25em;}
+.hero-signature{position:absolute;right:5%;bottom:5%;padding:4px 18px;color:#fff;text-shadow:0 2px 8px #052341,0 0 18px #052341;font-size:clamp(25px,5vw,58px)}
+.hero{position:relative;}
+@media(max-width:600px){.hero-signature{font-size:clamp(22px,6vw,35px);right:3%;bottom:2%;padding:0 6px;}footer .club-signature{display:inline-block;margin-top:5px;white-space:nowrap;}}
+
+/* Motto calligrafico originale approvato, proporzionato agli schermi */
+.club-signature{display:inline-flex!important;align-items:center;vertical-align:middle;white-space:nowrap;max-width:100%;font-size:0!important;line-height:1!important;letter-spacing:normal!important;}
+.club-signature img{display:block;width:clamp(145px,27vw,310px);max-width:100%;height:auto;object-fit:contain;}
+.hero-signature{position:absolute;right:3%;bottom:4%;padding:4px 8px;background:rgba(255,255,255,.91);border-radius:8px;max-width:90%;}
+.hero-signature img{width:clamp(170px,38vw,420px);}
+footer .club-signature img{width:clamp(140px,23vw,230px);filter:brightness(0) invert(1);}
+@media(max-width:600px){.hero-signature{right:3%;bottom:3%;padding:3px 6px;max-width:94%;}.hero-signature img{width:min(65vw,310px);}footer .club-signature img{width:min(53vw,205px);}}
+
+/* Contrasto della firma calligrafica su tutte le pagine */
+.hero-signature img{filter:brightness(0) invert(1) drop-shadow(0 2px 3px rgba(0,18,45,.8))!important;}
+footer .club-signature img{filter:brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,.55))!important;}
+/* Nei riquadri chiari la firma resta blu; su fondi scuri diventa bianca. */
+.club-signature img{object-fit:contain;}
+@media(max-width:600px){footer .club-signature img{width:min(52vw,205px)!important;}}
+</style><style> .return-home{display:inline-flex;align-items:center;gap:9px;background:#073566;color:#fff!important;text-decoration:none;padding:13px 22px;border-radius:4px;font:600 15px Arial,sans-serif;margin:24px 0 38px}.return-home:hover{background:#0b4c8c}.page-intro{background:#082f59;color:#fff;padding:45px max(5vw,22px)}.page-intro h1{font:italic clamp(32px,5vw,52px) Georgia,serif;margin:0}.page-intro p{font:16px/1.6 Arial,sans-serif;color:#e4edf8}.page-return{max-width:1180px;margin:0 auto;padding:0 20px}nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px}@media(max-width:700px){.page-intro{padding:30px 20px}} 
+/* Motto calligrafico originale approvato, proporzionato agli schermi */
+.club-signature{display:inline-flex!important;align-items:center;vertical-align:middle;white-space:nowrap;max-width:100%;font-size:0!important;line-height:1!important;letter-spacing:normal!important;}
+.club-signature img{display:block;width:clamp(145px,27vw,310px);max-width:100%;height:auto;object-fit:contain;}
+.hero-signature{position:absolute;right:3%;bottom:4%;padding:4px 8px;background:rgba(255,255,255,.91);border-radius:8px;max-width:90%;}
+.hero-signature img{width:clamp(170px,38vw,420px);}
+footer .club-signature img{width:clamp(140px,23vw,230px);filter:brightness(0) invert(1);}
+@media(max-width:600px){.hero-signature{right:3%;bottom:3%;padding:3px 6px;max-width:94%;}.hero-signature img{width:min(65vw,310px);}footer .club-signature img{width:min(53vw,205px);}}
+
+/* Contrasto della firma calligrafica su tutte le pagine */
+.hero-signature img{filter:brightness(0) invert(1) drop-shadow(0 2px 3px rgba(0,18,45,.8))!important;}
+footer .club-signature img{filter:brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,.55))!important;}
+/* Nei riquadri chiari la firma resta blu; su fondi scuri diventa bianca. */
+.club-signature img{object-fit:contain;}
+@media(max-width:600px){footer .club-signature img{width:min(52vw,205px)!important;}}
+</style></head><body><header><a href="index.html"><img alt="Gentlemen’s Golf Club — logo originale" src="assets/logo-originale.png"/></a><nav><a href="index.html">Home</a><a href="il-club.html">Il Club</a><a href="soci-e-cariche.html">Soci e Cariche</a><a href="albo-doro.html">Albo d’Oro</a><a href="gentlemens-cup.html">Gentlemen’s Cup</a><a href="galleria.html">Galleria</a><a href="documenti-del-club.html">Statuto</a><a href="area-soci.html">Area Soci 🔒</a><a href="vita-da-club.html">Vita da Club</a><a aria-current="page" href="contatti.html">Contatti</a></nav></header><main id="home"><div class="page-intro"><h1>Contatti</h1><p>Gentlemen’s Golf Club</p></div>
+<section class="section" id="contatti"><h2>Contatti</h2><p>Gentlemen’s Golf Club · Usmate Velate (MB). Per informazioni sul club e sulle prossime trasferte, rivolgersi alla Presidenza.</p></section><div class="page-return"><a class="return-home" href="index.html">← Torna alla Home</a></div></main><footer>Gentlemen’s Golf Club</footer></body></html>
